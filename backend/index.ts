@@ -13,7 +13,7 @@ import { HelloResolver } from './graphql';
           driver: ApolloDriver,
           path: 'api/graphql',
           bodyParserConfig: false,
-          autoSchemaFile: join(process.cwd(), 'backend/schema.gql'),
+          autoSchemaFile: process.env.NODE_ENV === 'development' ? join(process.cwd(), 'backend/schema.gql') : true,
           sortSchema: true,
           playground: true,
         }),
