@@ -1,0 +1,27 @@
+import Head from 'next/head'
+import styles from '../styles/Home.module.css'
+import React from 'react'
+import { gql, useQuery } from '@apollo/client'
+
+export default function Home() {
+  const { data } = useQuery(gql`
+    query Hello {
+      hello {
+        text
+      }
+    }
+  `);
+
+  return (
+    <>
+      <Head>
+        <title>Next-Nest</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className={styles.main}>
+        <h1>{data?.hello?.text}</h1>
+      </main>
+    </>
+  )
+}
