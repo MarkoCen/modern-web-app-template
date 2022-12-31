@@ -1,19 +1,19 @@
-
-/*
- * -------------------------------------------------------
- * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
- * -------------------------------------------------------
- */
-
-/* tslint:disable */
-/* eslint-disable */
-
-export interface IQuery {
-    hello(): Hello | Promise<Hello>;
-}
+import { ObjectType, Field, Resolver, Query } from '@nestjs/graphql'
 
 export interface Hello {
     text: string;
 }
 
-type Nullable<T> = T | null;
+@ObjectType('Hello')
+class HelloType implements Hello {
+    @Field({ name: 'text', nullable: false })
+    text!: string;
+}
+
+@Resolver(() => HelloType)
+export class HelloResolver {
+    @Query(returns => HelloType)
+    hello(): Hello {
+        return { text: 'Hello from GraphQL!' }
+    }
+}

@@ -3,17 +3,9 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { NestFactory } from '@nestjs/core';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
-import { Resolver, Query } from '@nestjs/graphql';
 import { join } from 'node:path';
-import type { Hello } from './graphql';
+import { HelloResolver } from './graphql';
 
-@Resolver()
-class GQResolver {
-    @Query('hello')
-    hello(): Hello {
-        return { text: 'Hello from GraphQL!' }
-    }
-}
 
 @Module({
     imports: [
@@ -21,14 +13,12 @@ class GQResolver {
           driver: ApolloDriver,
           path: 'api/graphql',
           bodyParserConfig: false,
-          typePaths: ['./**/*.gql'],
-          definitions: {
-            path: join(process.cwd(), 'backend/graphql.ts'),
-          },
+          autoSchemaFile: join(process.cwd(), 'backend/schema.gql'),
+          sortSchema: true,
           playground: true,
         }),
     ],
-    providers: [GQResolver],
+    providers: [HelloResolver],
 })
 class AppModule {
 
