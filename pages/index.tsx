@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import React from 'react'
-import { gql, useQuery } from '@apollo/client'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import React from "react";
+import { gql, useQuery } from "@apollo/client";
 
 export default function Home() {
   const { data } = useQuery(gql`
-    query Hello {
-      hello {
+    query Ping {
+      ping {
         text
       }
     }
@@ -20,8 +20,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>{data?.hello?.text}</h1>
+        <h1>{data?.ping?.text}</h1>
       </main>
     </>
-  )
+  );
 }
