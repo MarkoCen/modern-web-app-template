@@ -3,6 +3,7 @@ module.exports = {
     'next/core-web-vitals',
     'plugin:import/recommended',
     'plugin:import/typescript',
+    'plugin:tailwindcss/recommended',
     'prettier',
   ],
   plugins: ['prettier'],
