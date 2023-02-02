@@ -1,5 +1,6 @@
-import { Module } from "@nestjs/common";
-import { PingResolver } from "./ping.resolver";
+import { Module } from '@nestjs/common';
+
+import { PingResolver } from './ping.resolver';
 
 @Module({
   imports: [],

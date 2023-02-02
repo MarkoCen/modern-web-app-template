@@ -1,12 +1,12 @@
-import { ObjectType, Field, Resolver, Query } from "@nestjs/graphql";
+import { Field, ObjectType, Query, Resolver } from '@nestjs/graphql';
 
 export interface Ping {
   text: string;
 }
 
-@ObjectType("Ping")
+@ObjectType('Ping')
 class PingType implements Ping {
-  @Field({ name: "text", nullable: false })
+  @Field({ name: 'text', nullable: false })
   text!: string;
 }
 
@@ -14,6 +14,6 @@ class PingType implements Ping {
 export class PingResolver {
   @Query((returns) => PingType)
   ping(): Ping {
-    return { text: "Hello World!" };
+    return { text: 'Hello World!' };
   }
 }
