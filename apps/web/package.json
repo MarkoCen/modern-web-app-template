@@ -9,7 +9,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "test": "jest",
+    "test:coverage": "jest --coverage --runInBand",
+    "lint": "yarn check-type && yarn check-code",
+    "check-code": "next lint --ext .js --ext .ts --ext .tsx --ext .json --fix",
+    "check-type": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
     "next": "^13.4.12",

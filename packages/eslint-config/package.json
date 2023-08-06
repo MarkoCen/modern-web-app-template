@@ -6,7 +6,9 @@
   "main": "index.js",
   "license": "UNLICENSED",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint --ext js,ts ."
+  },
   "dependencies": {
 
   },
