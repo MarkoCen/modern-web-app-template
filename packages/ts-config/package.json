@@ -1,0 +1,15 @@
+{
+  "name": "@pkg/ts-config",
+  "version": "0.1.0",
+  "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
+  "author": "Marko Cen <markocen@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}

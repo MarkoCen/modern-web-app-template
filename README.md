@@ -1,3 +1,3 @@
-# next-nest
+# Modern Web Application Monorepo
 
-A demo application of integrating Nest.js GraphQL server with Next.js API handler
+A template repository for modern web application monorepo setup

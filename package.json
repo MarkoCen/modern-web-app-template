@@ -1,11 +1,15 @@
 {
-  "name": "next-nest",
+  "name": "modern-web-app-template",
   "version": "0.1.0",
   "main": "index.js",
-  "repository": "git@github.com:MarkoCen/next-nest.git",
+  "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
   "author": "Marko Cen <markocen@gmail.com>",
   "license": "UNLICENSED",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,38 +17,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.6",
-    "@nestjs/apollo": "^10.1.7",
-    "@nestjs/common": "^9.3.1",
-    "@nestjs/core": "^9.3.1",
-    "@nestjs/graphql": "^10.1.7",
-    "@nestjs/platform-express": "^9.3.1",
-    "@next/font": "^13.1.6",
-    "apollo-server-express": "^3.11.1",
-    "graphql": "^16.6.0",
-    "next": "^13.1.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.8.0",
-    "ts-morph": "^17.0.1",
-    "typescript": "^4.9.5"
+
   },
   "devDependencies": {
-    "@types/express": "^4.17.16",
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.33.0",
-    "eslint-config-next": "^13.1.6",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-tailwindcss": "^3.8.3",
-    "postcss": "^8.4.21",
-    "postcss-import": "^15.1.0",
-    "prettier": "^2.8.3",
-    "tailwindcss": "^3.2.4"
+    "turbo": "^1.10.12"
   }
 }

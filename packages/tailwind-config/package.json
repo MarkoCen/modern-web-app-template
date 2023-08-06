@@ -1,0 +1,20 @@
+{
+  "name": "@pkg/tailwind-config",
+  "version": "0.1.0",
+  "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
+  "author": "Marko Cen <markocen@gmail.com>",
+  "license": "UNLICENSED",
+  "main": "tailwind.config.js",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "postcss-import": "^15.1.0",
+    "postcss-preset-env": "^9.1.1",
+    "tailwindcss": "^3.3.3"
+  }
+}
