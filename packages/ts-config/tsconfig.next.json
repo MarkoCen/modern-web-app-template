@@ -16,6 +16,10 @@
     "jsx": "preserve",
     "incremental": true,
     "allowSyntheticDefaultImports": true,
-    "charset": "utf8"
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   }
 }

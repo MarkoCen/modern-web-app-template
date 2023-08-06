@@ -5,7 +5,7 @@ module.exports = {
     './rules/jest',
     './rules/jsdoc',
     './rules/json',
-    './rules/react-hooks',
+    // './rules/react-hooks',
     './rules/react',
     './rules/sonar',
     './rules/storybook',
