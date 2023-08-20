@@ -15,6 +15,7 @@
     "apps/*"
   ],
   "scripts": {
+    "prepare": "husky install",
     "preinstall": "npx -y only-allow pnpm",
     "dev": "pnpm turbo run dev",
     "build": "pnpm turbo run build",
@@ -25,6 +26,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "turbo": "^1.10.12"
+    "turbo": "^1.10.12",
+    "husky": "^8.0.3"
   }
 }
