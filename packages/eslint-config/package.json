@@ -13,8 +13,8 @@
 
   },
   "devDependencies": {
-    "@pkg/ts-config": "*",
-    "@pkg/tailwind-config": "*",
+    "@pkg/ts-config": "workspace:*",
+    "@pkg/tailwind-config": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "eslint": "^8.46.0",

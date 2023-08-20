@@ -6,17 +6,22 @@
   "author": "Marko Cen <markocen@gmail.com>",
   "license": "UNLICENSED",
   "private": true,
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=3"
+  },
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "start": "turbo run start",
-    "lint": "turbo run lint",
-    "test": "turbo run test",
-    "test:coverage": "turbo run test:coverage"
+    "preinstall": "npx -y only-allow pnpm",
+    "dev": "pnpm turbo run dev",
+    "build": "pnpm turbo run build",
+    "start": "pnpm turbo run start",
+    "lint": "pnpm turbo run lint",
+    "test": "pnpm turbo run test",
+    "test:coverage": "pnpm turbo run test:coverage"
   },
   "dependencies": {
 
