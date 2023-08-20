@@ -23,9 +23,7 @@
     "test": "pnpm turbo run test",
     "test:coverage": "pnpm turbo run test:coverage"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "turbo": "^1.10.12"
   }

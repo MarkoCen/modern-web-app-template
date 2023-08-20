@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['@pkg/eslint-config'],
+  extends: ['.'],
   env: {
     node: true,
     browser: true,

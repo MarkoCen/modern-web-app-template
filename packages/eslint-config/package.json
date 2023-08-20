@@ -7,11 +7,9 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext js,ts ."
+    "lint": "eslint --fix ."
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "@pkg/ts-config": "workspace:*",
     "@pkg/tailwind-config": "workspace:*",

@@ -2,6 +2,6 @@ packages:
   # all packages in direct sub dirs of packages/
   - 'packages/*'
   # all packages in sub dirs of apps/
-  - 'apps/**'
+  - 'apps/*'
   # exclude packages that are inside test directories
   - '!**/test/**'

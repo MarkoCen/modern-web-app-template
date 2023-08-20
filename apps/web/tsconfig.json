@@ -1,17 +1,8 @@
 {
-  "extends": [
-    "@pkg/ts-config/tsconfig.next.json"
-  ],
+  "extends": "@pkg/ts-config/tsconfig.next.json",
   "compilerOptions": {
     "rootDir": "./"
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    ".next"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", ".next"]
 }

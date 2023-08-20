@@ -4,6 +4,7 @@
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
         "graphql.vscode-graphql",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "streetsidesoftware.code-spell-checker"
     ]
 }

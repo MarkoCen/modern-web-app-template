@@ -1,37 +1,28 @@
 {
-  "name": "@app/web",
+  "name": "@pkg/components",
   "version": "0.1.0",
   "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
   "author": "Marko Cen <markocen@gmail.com>",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "test": "jest",
-    "test:coverage": "jest --coverage --runInBand",
     "lint": "pnpm check-type && pnpm check-code",
-    "check-code": "next lint --ext .js --ext .ts --ext .tsx --ext .json --fix",
+    "check-code": "eslint --fix .",
     "check-type": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
-    "@pkg/components": "workspace:*",
-    "next": "^13.4.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@pkg/eslint-config": "workspace:*",
     "@pkg/tailwind-config": "workspace:*",
     "@pkg/ts-config": "workspace:*",
-    "@pkg/components": "workspace:*",
-    "@types/node": "^20.4.8",
     "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7",
-    "eslint-config-next": "^13.4.12"
+    "@types/node": "^20.4.8",
+    "tailwindcss-animate": "^1.0.6"
   },
   "peerDependencies": {
+    "typescript": "^5",
     "tailwindcss": "^3"
   }
 }
