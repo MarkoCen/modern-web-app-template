@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 
 import '../styles/global.css';
+import '@pkg/components/styles.css';
+import { ThemeProvider } from '../components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Modern Web Application',
@@ -9,7 +11,15 @@ export const metadata: Metadata = {
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 };
