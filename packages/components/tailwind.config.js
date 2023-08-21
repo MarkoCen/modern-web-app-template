@@ -1,6 +1,5 @@
 module.exports = {
   darkMode: ['class'],
-  content: ['./**/*.{ts,tsx}'],
   theme: {
     container: {
       center: true,

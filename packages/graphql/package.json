@@ -1,0 +1,26 @@
+{
+  "name": "@pkg/graphql",
+  "version": "0.1.0",
+  "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
+  "author": "Marko Cen <markocen@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --fix ."
+  },
+  "dependencies": {
+    "@escape.tech/graphql-armor": "^2.2.0",
+    "@escape.tech/graphql-armor-character-limit": "^2.1.0",
+    "@graphql-yoga/plugin-response-cache": "^2.1.1",
+    "graphql": "^16.8.0",
+    "graphql-yoga": "^4.0.4",
+    "graphql-modules": "^2.2.0"
+  },
+  "devDependencies": {
+    "@pkg/ts-config": "workspace:*",
+    "@pkg/eslint-config": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
