@@ -11,6 +11,7 @@ module.exports = {
     './rules/storybook',
     './rules/tailwindcss',
     './rules/typescript',
+    './rules/graphql',
     './rules/prettier',
   ].map(require.resolve),
   rules: {},

@@ -48,3 +48,6 @@ yarn-error.log*
 
 # intellij
 .idea
+
+# graphql
+**/codegen

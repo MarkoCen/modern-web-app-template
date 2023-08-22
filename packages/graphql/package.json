@@ -11,14 +11,21 @@
   "dependencies": {
     "@escape.tech/graphql-armor": "^2.2.0",
     "@escape.tech/graphql-armor-character-limit": "^2.1.0",
+    "@graphql-tools/load-files": "^7.0.0",
     "@graphql-yoga/plugin-response-cache": "^2.1.1",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "graphql": "^16.8.0",
     "graphql-yoga": "^4.0.4",
-    "graphql-modules": "^2.2.0"
+    "graphql-modules": "^2.2.0",
+    "graphql-config": "^5.0.2"
   },
   "devDependencies": {
     "@pkg/ts-config": "workspace:*",
-    "@pkg/eslint-config": "workspace:*"
+    "@pkg/eslint-config": "workspace:*",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-codegen/graphql-modules-preset": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1"
   },
   "peerDependencies": {
     "typescript": "^5"

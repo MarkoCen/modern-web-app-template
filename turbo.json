@@ -12,6 +12,9 @@
       "persistent": true
     },
     "test": {},
-    "test:coverage": {}
+    "test:coverage": {},
+    "codegen": {
+      "cache": false
+    }
   }
 }
