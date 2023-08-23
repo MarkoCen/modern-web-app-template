@@ -2,21 +2,25 @@ import { addTypenameSelectionDocumentTransform } from '@graphql-codegen/client-p
 
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
+const typescriptPluginConfig = {
+  enumsAsTypes: true,
+  useTypeImports: true,
+  strictScalars: true,
+  dedupeFragments: true,
+  avoidOptionals: false,
+  immutableTypes: true,
+};
+
 const config: CodegenConfig = {
-  schema: 'graphql/**/schema/*.graphql',
-  documents: ['graphql/**/client/*.graphql'],
+  schema: './graphql/modules/**/*.graphql',
+  documents: ['./graphql/documents/**/*.{graphql,ts}'],
   ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
     './graphql/codegen/': {
       preset: 'client',
       presetConfig: {
         persistedDocuments: true,
-        useTypeImports: true,
-        strictScalars: true,
-        // namingConvention: 'change-case-all#capitalCase',
-        enumsAsTypes: true,
-        dedupeFragments: true,
-        avoidOptionals: false,
+        ...typescriptPluginConfig,
       },
       documentTransforms: [addTypenameSelectionDocumentTransform],
       plugins: [
@@ -32,6 +36,10 @@ const config: CodegenConfig = {
       presetConfig: {
         baseTypesPath: '../codegen/graphql-modules.ts',
         filename: 'codegen/types.ts',
+        ...typescriptPluginConfig,
+      },
+      config: {
+        ...typescriptPluginConfig,
       },
       plugins: [
         {

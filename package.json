@@ -23,7 +23,8 @@
     "lint": "pnpm turbo run lint",
     "test": "pnpm turbo run test",
     "test:coverage": "pnpm turbo run test:coverage",
-    "codegen": "pnpm turbo run codegen"
+    "codegen": "pnpm turbo run codegen",
+    "codegen:watch": "pnpm turbo run codegen:watch"
   },
   "dependencies": {},
   "devDependencies": {

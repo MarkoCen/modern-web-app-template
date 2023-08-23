@@ -15,7 +15,7 @@
     "check-code": "next lint --ext .js --ext .ts --ext .tsx --ext .json --fix",
     "check-type": "tsc --project tsconfig.json --pretty --noEmit",
     "codegen": "pnpm graphql-codegen",
-    "codegen:watch": "pnpm graphql-codegen --watch"
+    "codegen:watch": "pnpm graphql-codegen --watch \"graphql/documents/**/*.ts\""
   },
   "dependencies": {
     "@pkg/components": "workspace:*",

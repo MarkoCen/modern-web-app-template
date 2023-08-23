@@ -25,7 +25,9 @@
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/client-preset": "^4.1.0",
     "@graphql-codegen/graphql-modules-preset": "^4.0.1",
-    "@graphql-codegen/typescript-resolvers": "^4.0.1"
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@parcel/watcher": "^2.2.0"
   },
   "peerDependencies": {
     "typescript": "^5"

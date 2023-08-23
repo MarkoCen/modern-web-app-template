@@ -15,6 +15,10 @@
     "test:coverage": {},
     "codegen": {
       "cache": false
+    },
+    "codegen:watch": {
+      "cache": false,
+      "persistent": true
     }
   }
 }
