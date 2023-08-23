@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+import { Analytics } from '@vercel/analytics/react';
+
 import '../styles/global.css';
 import '@pkg/components/styles.css';
 import { ThemeProvider } from '../components/theme-provider';
@@ -19,6 +21,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
