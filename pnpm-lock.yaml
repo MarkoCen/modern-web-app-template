@@ -23,9 +23,6 @@ importers:
       '@graphql-codegen/client-preset':
         specifier: ^4
         version: 4.1.0(graphql@16.8.0)
-      '@graphql-codegen/graphql-modules-preset':
-        specifier: ^4
-        version: 4.0.1(graphql@16.8.0)
       '@graphql-typed-document-node/core':
         specifier: ^3
         version: 3.2.0(graphql@16.8.0)
@@ -209,6 +206,9 @@ importers:
 
   packages/graphql:
     dependencies:
+      '@envelop/graphql-modules':
+        specifier: ^5.0.0
+        version: 5.0.0(@envelop/core@4.0.0)(graphql-modules@2.2.0)(graphql@16.8.0)
       '@escape.tech/graphql-armor':
         specifier: ^2.2.0
         version: 2.2.0
@@ -1406,6 +1406,20 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@envelop/graphql-modules@5.0.0(@envelop/core@4.0.0)(graphql-modules@2.2.0)(graphql@16.8.0):
+    resolution: {integrity: sha512-wNtiL231xA5B9klEAQscrLhgzR4r/z4SzHQXDWBIBDvCsGEPo6YtMVxtEL8K+CubCLHYL8AfAnWaqL+xzw+iHA==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@envelop/core': ^4.0.0
+      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+      graphql-modules: ^1 || ^2.0.0
+    dependencies:
+      '@envelop/core': 4.0.0
+      graphql: 16.8.0
+      graphql-modules: 2.2.0(graphql@16.8.0)
+      tslib: 2.6.2
+    dev: false
+
   /@envelop/response-cache@5.1.0(@envelop/core@4.0.0)(graphql@16.8.0):
     resolution: {integrity: sha512-G81MF9XCQdmyZWgTkZa09rBusXNXhvjPMDjP4cfOpr8g1DEvEsxskEGT08f22hvl9Fg+G2wlVXBsHPLEr798Lg==}
     engines: {node: '>=16.0.0'}
@@ -1766,6 +1780,7 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: true
 
   /@graphql-codegen/plugin-helpers@5.0.1(graphql@16.8.0):
     resolution: {integrity: sha512-6L5sb9D8wptZhnhLLBcheSPU7Tg//DGWgc5tQBWX46KYTOTQHGqDpv50FxAJJOyFVJrveN9otWk9UT9/yfY4ww==}

@@ -1,7 +1,7 @@
 import { graphql } from '@gql';
 
 export const getTodos = graphql(`
-  query Todo {
+  query Todos {
     todos {
       ...TodoInfo
     }

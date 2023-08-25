@@ -9,6 +9,7 @@
     "lint": "eslint --fix ."
   },
   "dependencies": {
+    "@envelop/graphql-modules": "^5.0.0",
     "@escape.tech/graphql-armor": "^2.2.0",
     "@escape.tech/graphql-armor-character-limit": "^2.1.0",
     "@graphql-tools/load-files": "^7.0.0",

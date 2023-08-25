@@ -15,7 +15,7 @@
     "check-code": "next lint --ext .js --ext .ts --ext .tsx --ext .json --fix",
     "check-type": "tsc --project tsconfig.json --pretty --noEmit",
     "codegen": "pnpm graphql-codegen",
-    "codegen:watch": "pnpm graphql-codegen --watch \"graphql/documents/**/*.ts\""
+    "codegen:watch": "pnpm graphql-codegen --watch \"graphql-server/documents/**/*.ts\""
   },
   "dependencies": {
     "@pkg/components": "workspace:*",
@@ -44,7 +44,6 @@
     "graphql-config": "^5",
     "@graphql-codegen/cli": "^5",
     "@graphql-codegen/client-preset": "^4",
-    "@graphql-codegen/graphql-modules-preset": "^4",
     "@graphql-typed-document-node/core": "^3"
   }
 }

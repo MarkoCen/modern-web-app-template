@@ -12,11 +12,11 @@ const typescriptPluginConfig = {
 };
 
 const config: CodegenConfig = {
-  schema: './graphql/modules/**/*.graphql',
-  documents: ['./graphql/documents/**/*.{graphql,ts}'],
+  schema: './graphql-server/modules/**/*.{graphql,ts}',
+  documents: ['./graphql-server/documents/**/*.{graphql,ts}'],
   ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
-    './graphql/codegen/': {
+    './graphql-server/codegen/': {
       preset: 'client',
       presetConfig: {
         persistedDocuments: true,
@@ -31,7 +31,7 @@ const config: CodegenConfig = {
         },
       ],
     },
-    './graphql/modules/': {
+    './graphql-server/modules/': {
       preset: 'graphql-modules',
       presetConfig: {
         baseTypesPath: '../codegen/graphql-modules.ts',
@@ -40,6 +40,7 @@ const config: CodegenConfig = {
       },
       config: {
         ...typescriptPluginConfig,
+        contextType: 'GraphQLModules.Context',
       },
       plugins: [
         {

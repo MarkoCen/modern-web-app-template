@@ -17,7 +17,7 @@ export interface DefaultUserContext extends Record<string, any> {
 export interface CreateGraphQLServerOptions<SC, UC> {
   application: ApplicationConfig;
   graphqlEndpoint: string;
-  fetchAPI: YogaServerOptions<SC, UC>['fetchAPI'];
+  fetchAPI?: YogaServerOptions<SC, UC>['fetchAPI'];
   context?: YogaServerOptions<SC, UC>['context'];
 }
 

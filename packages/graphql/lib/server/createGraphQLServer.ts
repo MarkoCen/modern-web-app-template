@@ -1,3 +1,4 @@
+import { useGraphQLModules } from '@envelop/graphql-modules';
 import { createInMemoryCache } from '@graphql-yoga/plugin-response-cache';
 import { createApplication } from 'graphql-modules';
 import { createYoga } from 'graphql-yoga';
@@ -19,17 +20,19 @@ export const createGraphQLServer = <
   options: CreateGraphQLServerOptions<SC, UC>,
 ): YogaServerInstance<SC, UC> => {
   const app = createApplication(options.application);
-
   const cache = createInMemoryCache();
 
   return createYoga<SC, UC>({
-    schema: app.schema,
+    logging: process.env.NODE_ENV !== 'production' ? 'debug' : 'warn',
     graphiql: process.env.NODE_ENV !== 'production',
     graphqlEndpoint: options.graphqlEndpoint,
     fetchAPI: options.fetchAPI,
     context: options.context ? options.context : context({ cache }),
-    plugins: createPlugins({
-      cache,
-    }),
+    plugins: [
+      useGraphQLModules(app),
+      ...createPlugins({
+        cache,
+      }),
+    ],
   });
 };

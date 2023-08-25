@@ -3,17 +3,15 @@ import type {
   DefaultUserContext,
   GraphQLServerInitOptions,
 } from '../types';
-import type { YogaServerOptions } from 'graphql-yoga';
+import type { YogaInitialContext } from 'graphql-yoga';
 
-export const context = <
-  SC extends DefaultServerContext,
-  UC extends DefaultUserContext,
->({
-  cache,
-}: GraphQLServerInitOptions): YogaServerOptions<SC, UC>['context'] => {
-  return async () => {
-    return (await Promise.resolve<DefaultUserContext>({
-      cache,
-    })) as never;
+export const context =
+  <SC extends DefaultServerContext, UC extends DefaultUserContext>(
+    options: GraphQLServerInitOptions,
+  ): ((initialContext: YogaInitialContext & SC) => Promise<UC>) =>
+  // eslint-disable-next-line @typescript-eslint/require-await
+  async () => {
+    return {
+      cache: options.cache,
+    } as UC;
   };
-};
