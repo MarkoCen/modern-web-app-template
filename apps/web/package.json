@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"pnpm codegen:watch\" \"pnpm next dev\"",
     "build": "next build",
     "start": "next start",
     "test": "jest",
@@ -15,7 +15,7 @@
     "check-code": "next lint --ext .js --ext .ts --ext .tsx --ext .json --fix",
     "check-type": "tsc --project tsconfig.json --pretty --noEmit",
     "codegen": "pnpm graphql-codegen",
-    "codegen:watch": "pnpm graphql-codegen --watch \"graphql-server/documents/**/*.ts\""
+    "codegen:watch": "pnpm graphql-codegen --watch \"./graphql/documents/**/*.ts\""
   },
   "dependencies": {
     "@pkg/components": "workspace:*",
@@ -24,7 +24,10 @@
     "next": "^13.4.12",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "urql": "^4.0.5",
+    "@reduxjs/toolkit": "^1.9.5",
+    "react-redux": "^8.1.2"
   },
   "devDependencies": {
     "@pkg/eslint-config": "workspace:*",
@@ -34,6 +37,7 @@
     "@types/node": "^20.4.8",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
+    "concurrently": "^8.2.1",
     "eslint-config-next": "^13.4.12"
   },
   "peerDependencies": {

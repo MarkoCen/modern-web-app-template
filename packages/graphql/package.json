@@ -28,6 +28,7 @@
     "@graphql-codegen/graphql-modules-preset": "^4.0.1",
     "@graphql-codegen/typescript-resolvers": "^4.0.1",
     "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/client-preset-swc-plugin": "^0.2.0",
     "@parcel/watcher": "^2.2.0"
   },
   "peerDependencies": {

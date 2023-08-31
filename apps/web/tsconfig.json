@@ -1,10 +1,14 @@
 {
   "extends": "@pkg/ts-config/tsconfig.next.json",
   "compilerOptions": {
-    "baseUrl": "./",
     "paths": {
-      "@gql": ["./graphql-server/codegen"],
-      "@graphql/*": ["./graphql-server/*"]
+      "@gql": ["./graphql/codegen"],
+      "@gql/types": ["./graphql/codegen/graphql.ts"],
+      "@graphql/*": ["./graphql/*"],
+      "@store": ["./store/index.ts"],
+      "@store/*": ["./store/*"],
+      "@components/*": ["./components/*"],
+      "@services/*": ["./services/*"]
     }
   },
   "include": [
