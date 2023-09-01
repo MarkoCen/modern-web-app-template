@@ -1,9 +1,9 @@
 {
   "extends": "@pkg/ts-config/tsconfig.next.json",
   "compilerOptions": {
+    "moduleResolution": "Node",
     "paths": {
-      "@gql": ["./graphql/codegen"],
-      "@gql/types": ["./graphql/codegen/graphql.ts"],
+      "@gql/*": ["./graphql/codegen/*"],
       "@graphql/*": ["./graphql/*"],
       "@store": ["./store/index.ts"],
       "@store/*": ["./store/*"],

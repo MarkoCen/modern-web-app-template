@@ -1,5 +1,3 @@
-import { addTypenameSelectionDocumentTransform } from '@graphql-codegen/client-preset';
-
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const typescriptPluginConfig = {
@@ -12,21 +10,44 @@ const typescriptPluginConfig = {
 };
 
 const config: CodegenConfig = {
-  schema: './graphql/modules/**/*.{graphql,ts}',
-  documents: ['./graphql/documents/**/*.{graphql,ts}'],
+  schema: './graphql/modules/**/schema/*.graphql',
+  documents: ['./graphql/modules/**/operations/*.graphql'],
   ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
-    './graphql/codegen/': {
-      preset: 'client',
+    './graphql/codegen/types.ts': {
+      plugins: ['typescript'],
+    },
+    './graphql/modules': {
+      preset: 'near-operation-file',
       presetConfig: {
-        persistedDocuments: true,
-        ...typescriptPluginConfig,
+        baseTypesPath: '../codegen/types.ts',
+        fileName: 'index',
+        extension: '.ts',
       },
-      documentTransforms: [addTypenameSelectionDocumentTransform],
       plugins: [
         {
           add: {
-            content: '/* eslint-disable */',
+            content: [
+              '/* eslint-disable */',
+              '/* DO NOT EDIT THIS AUTO-GENERATED FILE */',
+            ],
+          },
+        },
+        {
+          add: {
+            placement: 'append',
+            content: [
+              'module.hot?.accept();',
+              '/* DO NOT EDIT THIS AUTO-GENERATED FILE */',
+            ],
+          },
+        },
+        'typescript-operations',
+        {
+          'typescript-rtk-query': {
+            importBaseApiFrom: '@store/base-query',
+            exportHooks: true,
+            overrideExisting: 'module.hot?.status() === "apply"',
           },
         },
       ],
@@ -45,12 +66,18 @@ const config: CodegenConfig = {
       plugins: [
         {
           add: {
-            content: '/* eslint-disable */',
+            content: [
+              '/* eslint-disable */',
+              '/* DO NOT EDIT THIS AUTO-GENERATED FILE */',
+            ],
           },
         },
         'typescript',
         'typescript-resolvers',
       ],
+    },
+    './graphql/codegen/introspection.json': {
+      plugins: ['introspection'],
     },
   },
 };

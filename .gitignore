@@ -51,5 +51,4 @@ yarn-error.log*
 
 # graphql
 **/codegen
-apps/**/graphql/modules/**/resolvers/types.ts
 

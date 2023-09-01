@@ -1,0 +1,6 @@
+fragment TodoInfo on Todo {
+  id
+  note
+  date
+  status
+}
