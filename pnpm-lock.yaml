@@ -32,6 +32,9 @@ importers:
       '@pkg/graphql':
         specifier: workspace:*
         version: link:../../packages/graphql
+      '@tanstack/react-query':
+        specifier: ^5.8.4
+        version: 5.8.4(react-dom@18.2.0)(react@18.2.0)
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
@@ -105,10 +108,13 @@ importers:
         version: 5.0.0(graphql@16.8.1)(typescript@5.3.2)
       '@tanstack/react-query':
         specifier: '*'
-        version: 5.8.4(react@18.2.0)
+        version: 5.8.4(react-dom@18.2.0)(react@18.2.0)
       graphql:
         specifier: '*'
         version: 16.8.1
+      graphql-request:
+        specifier: '*'
+        version: 6.1.0(graphql@16.8.1)
       react:
         specifier: ^18
         version: 18.2.0
@@ -259,6 +265,9 @@ importers:
       graphql:
         specifier: ^16.8.1
         version: 16.8.1
+      graphql-request:
+        specifier: ^6.1.0
+        version: 6.1.0(graphql@16.8.1)
       graphql-yoga:
         specifier: ^5.0.0
         version: 5.0.0(graphql@16.8.1)
@@ -2589,7 +2598,7 @@ packages:
     resolution: {integrity: sha512-SWFMFtcHfttLYif6pevnnMYnBvxKf3C+MHMH7bevyYfpXpTMsLB9O6nNGBdWSoPwnZRXFNyNeVZOw25Wmdasow==}
     dev: false
 
-  /@tanstack/react-query@5.8.4(react@18.2.0):
+  /@tanstack/react-query@5.8.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-CD+AkXzg8J72JrE6ocmuBEJfGzEzu/bzkD6sFXFDDB5yji9N20JofXZlN6n0+CaPJuIi+e4YLCbGsyPFKkfNQA==}
     peerDependencies:
       react: ^18.0.0
@@ -2603,6 +2612,7 @@ packages:
     dependencies:
       '@tanstack/query-core': 5.8.3
       react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@types/js-yaml@4.0.9:

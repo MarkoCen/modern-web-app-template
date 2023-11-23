@@ -9,7 +9,7 @@ const config: CodegenConfig = {
       plugins: [
         {
           add: {
-            content: '/* eslint-disable */',
+            content: ['/* eslint-disable */', '// @ts-nocheck'],
           },
         },
         'typescript',
@@ -28,7 +28,7 @@ const config: CodegenConfig = {
       plugins: [
         {
           add: {
-            content: '/* eslint-disable */',
+            content: ['/* eslint-disable */', '// @ts-nocheck'],
           },
         },
         'typescript',
@@ -36,7 +36,9 @@ const config: CodegenConfig = {
         'typescript-react-query',
       ],
       config: {
+        strictScalars: true,
         reactQueryVersion: 5,
+        fetcher: '@pkg/graphql/react#fetcher',
       },
     },
     './codegen/introspection.json': {
