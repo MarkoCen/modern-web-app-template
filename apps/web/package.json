@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@feature/todo/graphql": "workspace:*",
-    "@graphql-tools/load-files": "^7.0.0",
     "@graphql-tools/merge": "^9.0.1",
     "@pkg/components": "workspace:*",
     "@pkg/graphql": "workspace:*",

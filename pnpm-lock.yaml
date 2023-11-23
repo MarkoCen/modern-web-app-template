@@ -20,9 +20,6 @@ importers:
       '@feature/todo/graphql':
         specifier: workspace:*
         version: link:../../features/todo/graphql
-      '@graphql-tools/load-files':
-        specifier: ^7.0.0
-        version: 7.0.0(graphql@16.8.1)
       '@graphql-tools/merge':
         specifier: ^9.0.1
         version: 9.0.1(graphql@16.8.1)
@@ -125,6 +122,9 @@ importers:
       '@pkg/ts-config':
         specifier: workspace:*
         version: link:../../../packages/ts-config
+      '@pkg/typedefs-plugin':
+        specifier: 'workspace: *'
+        version: link:../../../packages/typedefs-plugin
 
   packages/components:
     dependencies:
@@ -320,6 +320,16 @@ importers:
       typescript:
         specifier: ^5.3.2
         version: 5.3.2
+
+  packages/typedefs-plugin:
+    dependencies:
+      graphql:
+        specifier: '*'
+        version: 16.8.1
+    devDependencies:
+      '@pkg/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
 
 packages:
 
@@ -2028,18 +2038,6 @@ packages:
       graphql: 16.8.1
       tslib: 2.6.2
       unixify: 1.0.0
-
-  /@graphql-tools/load-files@7.0.0(graphql@16.8.1):
-    resolution: {integrity: sha512-P98amERIwI7FD8Bsq6xUbz9Mj63W8qucfrE/WQjad5jFMZYdFFt46a99FFdfx8S/ZYgpAlj/AZbaTtWLitMgNQ==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
-    dependencies:
-      globby: 11.1.0
-      graphql: 16.8.1
-      tslib: 2.6.2
-      unixify: 1.0.0
-    dev: false
 
   /@graphql-tools/load@7.8.14(graphql@16.8.1):
     resolution: {integrity: sha512-ASQvP+snHMYm+FhIaLxxFgVdRaM0vrN9wW2BKInQpktwWTXVyk+yP5nQUCEGmn0RTdlPKrffBaigxepkEAJPrg==}

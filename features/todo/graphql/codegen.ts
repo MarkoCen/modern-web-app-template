@@ -1,20 +1,18 @@
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
+const addPlugin = {
+  add: {
+    content: ['/* eslint-disable */', '// @ts-nocheck'],
+  },
+};
+
 const config: CodegenConfig = {
   schema: './schema/*.graphql',
   documents: ['./operations/*.graphql'],
   ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
     './codegen/types.ts': {
-      plugins: [
-        {
-          add: {
-            content: ['/* eslint-disable */', '// @ts-nocheck'],
-          },
-        },
-        'typescript',
-        'typescript-resolvers',
-      ],
+      plugins: [addPlugin, 'typescript', 'typescript-resolvers'],
       config: {
         enumsAsTypes: true,
         useTypeImports: true,
@@ -26,11 +24,7 @@ const config: CodegenConfig = {
     },
     './codegen/operations.ts': {
       plugins: [
-        {
-          add: {
-            content: ['/* eslint-disable */', '// @ts-nocheck'],
-          },
-        },
+        addPlugin,
         'typescript',
         'typescript-operations',
         'typescript-react-query',
@@ -40,6 +34,9 @@ const config: CodegenConfig = {
         reactQueryVersion: 5,
         fetcher: '@pkg/graphql/react#fetcher',
       },
+    },
+    './codegen/typeDefs.ts': {
+      plugins: [addPlugin, '@pkg/typedefs-plugin'],
     },
     './codegen/introspection.json': {
       plugins: ['introspection'],

@@ -1,0 +1,19 @@
+{
+  "name": "@pkg/typedefs-plugin",
+  "version": "0.1.0",
+  "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
+  "author": "Marko Cen <markocen@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@pkg/eslint-config": "workspace:*"
+  },
+  "peerDependencies": {
+    "graphql": "*"
+  }
+}
