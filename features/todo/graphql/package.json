@@ -21,7 +21,6 @@
     "react": "^18",
     "typescript": "^5",
     "@graphql-codegen/cli": "*",
-    "graphql": "*",
     "@tanstack/react-query": "*"
   }
 }

@@ -5,6 +5,7 @@ const basePreset = require('@pkg/tailwind-config/tailwind.config');
 module.exports = {
   presets: [basePreset, componentsPreset],
   content: [
+    './styles/*.css',
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
