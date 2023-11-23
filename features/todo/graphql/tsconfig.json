@@ -1,0 +1,12 @@
+{
+  "extends": "@pkg/ts-config/tsconfig.react.json",
+  "compilerOptions": {
+    "rootDir": "./"
+  },
+  "include": [
+    "./*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../../../packages/graphql/custom.d.ts"
+  ]
+}

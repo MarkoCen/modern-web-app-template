@@ -12,6 +12,7 @@
   },
   "workspaces": [
     "packages/*",
+    "features/**",
     "apps/*"
   ],
   "scripts": {
@@ -28,7 +29,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "turbo": "^1.10.12",
+    "turbo": "^1.10.16",
     "husky": "^8.0.3"
   }
 }

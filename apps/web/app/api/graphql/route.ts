@@ -1,4 +1,4 @@
-import { server } from '@graphql/index';
+import { server } from '../../../graphql-server';
 
 const { handleRequest } = server;
 

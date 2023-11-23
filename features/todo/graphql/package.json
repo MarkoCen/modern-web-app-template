@@ -1,0 +1,27 @@
+{
+  "name": "@feature/todo/graphql",
+  "version": "0.1.0",
+  "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
+  "author": "Marko Cen <markocen@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm graphql-codegen --watch",
+    "lint": "pnpm eslint --fix .",
+    "codegen": "pnpm graphql-codegen"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@pkg/eslint-config": "workspace:*",
+    "@pkg/ts-config": "workspace:*",
+    "@pkg/graphql": "workspace:*",
+    "@graphql-codegen/typescript-react-query": "^6.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "typescript": "^5",
+    "@graphql-codegen/cli": "*",
+    "graphql": "*",
+    "@tanstack/react-query": "*"
+  }
+}

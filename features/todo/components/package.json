@@ -1,5 +1,5 @@
 {
-  "name": "@pkg/components",
+  "name": "@feature/todo/components",
   "version": "0.1.0",
   "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
   "author": "Marko Cen <markocen@gmail.com>",
@@ -10,23 +10,13 @@
     "check-code": "eslint --fix .",
     "check-type": "tsc --project tsconfig.json --pretty --noEmit"
   },
-  "dependencies": {
-    "clsx": "^2.0.0",
-    "tailwind-merge": "^1.14.0",
-    "class-variance-authority": "^0.7.0",
-    "@radix-ui/react-slot": "^1.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@pkg/eslint-config": "workspace:*",
-    "@pkg/tailwind-config": "workspace:*",
-    "@pkg/ts-config": "workspace:*",
-    "@types/node": "^20.9.4",
-    "@types/react": "^18.2.38",
-    "tailwindcss-animate": "^1.0.7"
+    "@pkg/ts-config": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18",
-    "tailwindcss": "^3",
     "typescript": "^5"
   }
 }

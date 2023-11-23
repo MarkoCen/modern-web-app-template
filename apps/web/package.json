@@ -6,49 +6,41 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"pnpm codegen:watch\" \"pnpm next dev\"",
+    "dev": "pnpm next dev",
     "build": "next build",
     "start": "next start",
     "test": "jest",
     "test:coverage": "jest --coverage --runInBand",
     "lint": "pnpm check-type && pnpm check-code",
     "check-code": "next lint --ext .js --ext .ts --ext .tsx --ext .json --fix",
-    "check-type": "tsc --project tsconfig.json --pretty --noEmit",
-    "codegen": "pnpm graphql-codegen",
-    "codegen:watch": "pnpm graphql-codegen --watch"
+    "check-type": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
-    "@pkg/components": "workspace:*",
+    "@feature/todo/graphql": "workspace:*",
     "@pkg/graphql": "workspace:*",
-    "@vercel/analytics": "^1.0.2",
-    "next": "^13.4.12",
+    "@pkg/components": "workspace:*",
+    "@vercel/analytics": "^1.1.1",
+    "next": "^14.0.3",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@reduxjs/toolkit": "^1.9.5",
-    "@rtk-query/graphql-request-base-query": "^2.2.0",
-    "react-redux": "^8.1.2",
-    "graphql-tag": "^2.12.6"
+    "@graphql-tools/load-files": "^7.0.0",
+    "@graphql-tools/merge": "^9.0.1"
   },
   "devDependencies": {
     "@pkg/eslint-config": "workspace:*",
     "@pkg/tailwind-config": "workspace:*",
     "@pkg/ts-config": "workspace:*",
     "@pkg/components": "workspace:*",
-    "@types/node": "^20.4.8",
-    "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7",
-    "@types/webpack-env": "^1.18.1",
-    "concurrently": "^8.2.1",
-    "eslint-config-next": "^13.4.12"
+    "@types/node": "^20.9.4",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
+    "@types/webpack-env": "^1.18.4",
+    "concurrently": "^8.2.2",
+    "eslint-config-next": "^14.0.3"
   },
   "peerDependencies": {
     "typescript": "^5",
-    "tailwindcss": "^3",
-    "graphql": "^16",
-    "graphql-modules": "^2",
-    "graphql-config": "^5",
-    "@graphql-codegen/cli": "^5",
-    "@graphql-typed-document-node/core": "^3"
+    "tailwindcss": "^3"
   }
 }

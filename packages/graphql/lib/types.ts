@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type { createInMemoryCache } from '@graphql-yoga/plugin-response-cache';
-import type { ApplicationConfig } from 'graphql-modules';
-import type { YogaServerOptions } from 'graphql-yoga';
+import type { YogaServerOptions, createSchema } from 'graphql-yoga';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
 export interface DefaultServerContext extends Record<string, any> {
@@ -15,7 +14,8 @@ export interface DefaultUserContext extends Record<string, any> {
 }
 
 export interface CreateGraphQLServerOptions<SC, UC> {
-  application: ApplicationConfig;
+  typeDefs: NonNullable<Parameters<typeof createSchema>[0]['typeDefs']>;
+  resolvers: unknown;
   graphqlEndpoint: string;
   fetchAPI?: YogaServerOptions<SC, UC>['fetchAPI'];
   context?: YogaServerOptions<SC, UC>['context'];

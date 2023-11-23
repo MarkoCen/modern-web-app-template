@@ -14,7 +14,8 @@
   },
   "eslint.workingDirectories": [
     { "pattern": "./apps/*/" },
-    { "pattern": "./packages/*/" }
+    { "pattern": "./packages/*/" },
+    { "pattern": "./features/**/*/" }
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.words": [
