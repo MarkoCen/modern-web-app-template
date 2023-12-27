@@ -1,6 +1,6 @@
 'use client';
 
-import { useTodosQuery } from '@feature/todo/graphql';
+import { useTodosQuery } from '@feature/todo.graphql';
 import { Button } from '@pkg/components';
 
 const IndexPage: React.FC = () => {

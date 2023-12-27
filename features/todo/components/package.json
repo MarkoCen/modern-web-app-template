@@ -1,5 +1,5 @@
 {
-  "name": "@feature/todo/components",
+  "name": "@feature/todo.components",
   "version": "0.1.0",
   "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
   "author": "Marko Cen <markocen@gmail.com>",
@@ -16,7 +16,7 @@
     "@pkg/ts-config": "workspace:*"
   },
   "peerDependencies": {
-    "react": "^18",
-    "typescript": "^5"
+    "react": "*",
+    "typescript": "*"
   }
 }

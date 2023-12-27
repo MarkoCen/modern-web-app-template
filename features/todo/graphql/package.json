@@ -1,5 +1,5 @@
 {
-  "name": "@feature/todo/graphql",
+  "name": "@feature/todo.graphql",
   "version": "0.1.0",
   "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
   "author": "Marko Cen <markocen@gmail.com>",
@@ -19,8 +19,8 @@
     "@graphql-codegen/typescript-react-query": "^6.0.0"
   },
   "peerDependencies": {
-    "react": "^18",
-    "typescript": "^5",
+    "react": "*",
+    "typescript": "*",
     "@graphql-codegen/cli": "*",
     "@tanstack/react-query": "*"
   }
