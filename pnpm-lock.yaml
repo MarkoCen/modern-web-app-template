@@ -82,6 +82,22 @@ importers:
         specifier: ^14.0.4
         version: 14.0.4(eslint@8.56.0)(typescript@5.3.2)
 
+  features/common/services:
+    dependencies:
+      ky:
+        specifier: ^1.1.3
+        version: 1.1.3
+      typescript:
+        specifier: '*'
+        version: 5.3.3
+    devDependencies:
+      '@pkg/eslint-config':
+        specifier: workspace:*
+        version: link:../../../packages/eslint-config
+      '@pkg/ts-config':
+        specifier: workspace:*
+        version: link:../../../packages/ts-config
+
   features/todo/components:
     dependencies:
       react:
@@ -5372,6 +5388,11 @@ packages:
       json-buffer: 3.0.1
     dev: true
 
+  /ky@1.1.3:
+    resolution: {integrity: sha512-t7q8sJfazzHbfYxiCtuLIH4P+pWoCgunDll17O/GBZBqMt2vHjGSx5HzSxhOc2BDEg3YN/EmeA7VKrHnwuWDag==}
+    engines: {node: '>=18'}
+    dev: false
+
   /language-subtag-registry@0.3.22:
     resolution: {integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==}
     dev: true
@@ -7233,7 +7254,6 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
 
   /ua-parser-js@1.0.37:
     resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}

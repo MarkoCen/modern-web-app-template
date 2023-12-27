@@ -1,0 +1,21 @@
+{
+  "name": "@feature/common.services",
+  "version": "0.1.0",
+  "repository": "git@github.com:MarkoCen/modern-web-app-template.git",
+  "author": "Marko Cen <markocen@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "lint": "pnpm eslint --fix ."
+  },
+  "dependencies": {
+    "ky": "^1.1.3"
+  },
+  "devDependencies": {
+    "@pkg/eslint-config": "workspace:*",
+    "@pkg/ts-config": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "*"
+  }
+}
