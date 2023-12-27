@@ -18,7 +18,7 @@
   "scripts": {
     "prepare": "husky install",
     "preinstall": "npx -y only-allow pnpm",
-    "dev": "pnpm turbo run dev",
+    "dev": "pnpm turbo run dev --concurrency 20",
     "build": "pnpm turbo run build",
     "start": "pnpm turbo run start",
     "lint": "pnpm turbo run lint",
