@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { createInMemoryCache } from '@graphql-yoga/plugin-response-cache';
+import type {
+  UseResponseCacheParameter,
+  createInMemoryCache,
+} from '@graphql-yoga/plugin-response-cache';
 import type { YogaServerOptions, createSchema } from 'graphql-yoga';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
@@ -24,4 +27,5 @@ export interface CreateGraphQLServerOptions<SC, UC> {
 export interface GraphQLServerInitOptions {
   cache: ReturnType<typeof createInMemoryCache>;
   cacheTTL?: number;
+  session?: UseResponseCacheParameter['session'];
 }

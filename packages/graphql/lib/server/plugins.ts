@@ -6,11 +6,12 @@ import type { Plugin } from 'graphql-yoga';
 export const createPlugins = ({
   cache,
   cacheTTL,
+  session = () => null,
 }: GraphQLServerInitOptions): Plugin[] => {
   return [
     useResponseCache({
-      session: (req) => req.headers.get('authorization'),
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      includeExtensionMetadata: true,
+      session,
       cache,
       ttl: cacheTTL ?? 10 * 60 * 1000, // default to catch the operation result for 10mins
     }),
