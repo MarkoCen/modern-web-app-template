@@ -1,21 +1,23 @@
 'use client';
 
+import { useState } from 'react';
+
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-const queryClient = new QueryClient();
-
 export const ClientProviders: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const [queryClient] = useState(() => new QueryClient());
+
   return (
     <>
       <QueryClientProvider client={queryClient}>
         <NextThemesProvider
           attribute='class'
-          defaultTheme='system'
-          enableSystem
+          defaultTheme='light'
+          enableSystem={false}
         >
           {children}
         </NextThemesProvider>

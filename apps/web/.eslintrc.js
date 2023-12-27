@@ -6,4 +6,20 @@ module.exports = {
       rootDir: 'apps/web',
     },
   },
+  overrides: [
+    {
+      files: ['locales/*.json'],
+      extends: ['plugin:jsonc/recommended-with-json'],
+      rules: {
+        'jsonc/key-name-casing': [
+          'error',
+          {
+            camelCase: true,
+            SCREAMING_SNAKE_CASE: true,
+            PascalCase: true,
+          },
+        ],
+      },
+    },
+  ],
 };
