@@ -14,6 +14,7 @@
     "@pkg/eslint-config": "workspace:*"
   },
   "peerDependencies": {
+    "@graphql-tools/utils": "*",
     "graphql": "*"
   }
 }

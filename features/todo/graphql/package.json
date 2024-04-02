@@ -15,13 +15,9 @@
     "@pkg/eslint-config": "workspace:*",
     "@pkg/ts-config": "workspace:*",
     "@pkg/graphql": "workspace:*",
-    "@pkg/typedefs-plugin": "workspace: *",
-    "@graphql-codegen/typescript-react-query": "^6.0.0"
+    "@pkg/typedefs-plugin": "workspace: *"
   },
   "peerDependencies": {
-    "react": "*",
-    "typescript": "*",
-    "@graphql-codegen/cli": "*",
-    "@tanstack/react-query": "*"
+    "@graphql-codegen/cli": "*"
   }
 }

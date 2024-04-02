@@ -16,7 +16,6 @@
     "@pkg/ts-config": "workspace:*"
   },
   "peerDependencies": {
-    "react": "*",
-    "typescript": "*"
+    "react": "*"
   }
 }

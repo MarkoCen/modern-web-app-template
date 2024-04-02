@@ -81,6 +81,7 @@ module.exports = {
               '**/*.spec.{ts,tsx,js,jsx}',
               '**/*.stories.{ts,tsx,js,jsx}',
               '*.config.{ts,js}',
+              'codegen.ts',
               'jest.*.{ts,js}',
             ],
           },

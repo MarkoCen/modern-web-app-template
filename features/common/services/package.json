@@ -6,16 +6,15 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "lint": "pnpm eslint --fix ."
+    "lint": "pnpm check-type && pnpm check-code",
+    "check-code": "eslint --fix .",
+    "check-type": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
-    "ky": "^1.1.3"
+    "ky": "^1.2.3"
   },
   "devDependencies": {
     "@pkg/eslint-config": "workspace:*",
     "@pkg/ts-config": "workspace:*"
-  },
-  "peerDependencies": {
-    "typescript": "*"
   }
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 
-import { Analytics } from '@vercel/analytics/react';
 import { Roboto } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
@@ -57,7 +56,6 @@ const Layout: React.FC<{
       <body>
         <NextIntlClientProvider messages={messages}>
           <ClientProviders>{children}</ClientProviders>
-          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>

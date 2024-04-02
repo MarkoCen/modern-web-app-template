@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@pkg/graphql/react';
 
 export const ClientProviders: React.FC<{ children: React.ReactNode }> = ({
   children,
